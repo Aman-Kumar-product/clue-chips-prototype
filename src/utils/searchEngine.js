@@ -1,5 +1,6 @@
 import { pipeline, env } from '@xenova/transformers';
 import photoEmbeddings from '../data/photo_embeddings.json';
+import photoSearchText from '../data/photo_search_text.json';
 
 // Skip local model caching issues in some browser environments
 env.allowLocalModels = false;
@@ -119,6 +120,12 @@ export async function rankPhotos(queryEmbedding, intentData, allPhotos, activeCh
         if (chip.type === 'people' && photo.people.includes(chip.value)) matchesThisChip = true;
         if (chip.type === 'place' && photo.place === chip.value) matchesThisChip = true;
         if (chip.type === 'event' && photo.event === chip.value) matchesThisChip = true;
+        if (chip.type === 'custom') {
+          const customVal = chip.value.toLowerCase();
+          const desc = (photoSearchText[photo.id] || "").toLowerCase();
+          const metaText = `${photo.place || ''} ${photo.event || ''} ${(photo.people || []).join(' ')}`.toLowerCase();
+          if (desc.includes(customVal) || metaText.includes(customVal)) matchesThisChip = true;
+        }
         
         if (matchesThisChip) {
           chipScore += 1.0; // Soft boost for matching this specific chip

@@ -24,6 +24,10 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
   const [activeChips, setActiveChips] = useState([]);
   const [lastQueryContext, setLastQueryContext] = useState(null);
   
+  // Custom chip UI state
+  const [customChipText, setCustomChipText] = useState('');
+  const [isTypingCustom, setIsTypingCustom] = useState(false);
+  
   // Track async operations to prevent race conditions
   const searchIdRef = React.useRef(0);
   
@@ -165,7 +169,7 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
         onSettingsClick={() => setShowSettings(!showSettings)}
       />
 
-      {(peopleChips.length > 0 || otherFilterChips.length > 0) && (
+      {(rankedPhotos !== null) && (
         <div className="filters-section">
           {peopleChips.length > 0 && (
             <div className="chip-category">
@@ -176,14 +180,42 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
             </div>
           )}
           
-          {otherFilterChips.length > 0 && (
-            <div className="chip-category">
-              <div className="chip-category-label">Filters as per search results</div>
-              <div className="clue-chips-container">
-                {otherFilterChips.map(renderChip)}
-              </div>
+          <div className="chip-category">
+            <div className="chip-category-label">Filters as per search results</div>
+            <div className="clue-chips-container">
+              {otherFilterChips.map(renderChip)}
+              
+              {isTypingCustom ? (
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  if (customChipText.trim()) {
+                    handleChipToggle({ 
+                      type: 'custom', 
+                      value: customChipText.trim(), 
+                      key: 'custom:' + customChipText.trim().toLowerCase(), 
+                      count: '?' 
+                    });
+                    setCustomChipText('');
+                  }
+                  setIsTypingCustom(false);
+                }}>
+                  <input 
+                    type="text" 
+                    className="custom-chip-input" 
+                    autoFocus 
+                    value={customChipText} 
+                    onChange={e => setCustomChipText(e.target.value)} 
+                    onBlur={() => setIsTypingCustom(false)}
+                    placeholder="Type keyword..." 
+                  />
+                </form>
+              ) : (
+                <button className="clue-chip custom-add-btn" onClick={() => setIsTypingCustom(true)}>
+                  + Add memory filter
+                </button>
+              )}
             </div>
-          )}
+          </div>
         </div>
       )}
       

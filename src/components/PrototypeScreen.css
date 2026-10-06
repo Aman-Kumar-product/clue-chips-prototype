@@ -167,6 +167,20 @@
   font-size: 11px;
 }
 
+.custom-chip-input {
+  border: 1px solid var(--google-blue);
+  border-radius: 16px;
+  padding: 6px 14px;
+  font-size: 13px;
+  outline: none;
+  width: 120px;
+}
+
+.custom-add-btn {
+  border-style: dashed;
+  color: var(--google-text-secondary);
+}
+
 .gallery-scroll-area.with-chips {
   padding-top: 180px;
 }
