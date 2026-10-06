@@ -26,6 +26,14 @@ export default function InstructionScreen({ onBegin }) {
           </ul>
         </div>
 
+        <div className="section" style={{ backgroundColor: 'rgba(255, 171, 0, 0.1)', padding: '12px 16px', borderRadius: '8px', borderLeft: '4px solid #ffab00' }}>
+          <h2 style={{ color: '#ffab00', marginTop: 0, fontSize: '16px' }}>⚠️ Prototype Performance Notes:</h2>
+          <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: '#5f6368' }}>
+            <li><strong>Initial Search:</strong> The AI model runs entirely in your browser. Your very first search will take a few extra seconds to download the AI engine.</li>
+            <li><strong>Scrolling:</strong> We don't compress thumbnails, so the gallery forces your browser to load dozens of megabytes of high-res images at once. Scrolling may be slightly sluggish!</li>
+          </ul>
+        </div>
+
         <p className="outro">
           Please take your time to experience the story. When you are ready, click below to begin.
         </p>
