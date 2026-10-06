@@ -38,7 +38,7 @@
   justify-content: center;
   align-items: center;
   padding: 80px 24px;
-  overflow: hidden;
+  overflow-y: auto; /* allow scrolling if images stack vertically */
 }
 
 .photo-grid {
@@ -123,4 +123,27 @@
 
 .primary-nav:hover:not(:disabled) {
   background-color: #aecbfa;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .slideshow-content {
+    padding: 80px 16px 120px 16px; /* Extra bottom padding so scroll doesn't hit the bottom bar */
+    align-items: flex-start; /* Start from top when scrolling */
+  }
+
+  .photo-grid {
+    gap: 24px;
+  }
+
+  /* Stack all layouts vertically on mobile */
+  .photos-2, .photos-3, .photos-4 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .photo-wrapper img {
+    max-height: 50vh; /* Keep them reasonably sized on mobile so they don't take up the entire scroll area each */
+    width: 100%;
+  }
 }
