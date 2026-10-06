@@ -92,11 +92,8 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
       
       const { relevant } = splitPhotos(results, []);
       
-      const maxScore = Math.max(...relevant.map(p => p.semanticAndIntentScore));
-      const chipPhotos = relevant.filter(p => p.semanticAndIntentScore >= maxScore * 0.70).slice(0, 30);
-      
       setRankedPhotos(results);
-      setClueChips(generateClueChips(chipPhotos));
+      setClueChips(generateClueChips(relevant));
       setActiveChips([]); 
       setLastQueryContext({ queryEmb, intent });
     } catch (e) {
@@ -128,12 +125,8 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
       
       setRankedPhotos(results);
       
-      // Strict threshold just for chips
-      const maxScore = Math.max(...relevant.map(p => p.semanticAndIntentScore));
-      const chipPhotos = relevant.filter(p => p.semanticAndIntentScore >= maxScore * 0.70).slice(0, 30);
-      
-      // Generate chips from the filtered array
-      let newClueChips = generateClueChips(chipPhotos);
+      // Generate chips from ALL relevant photos, not just the top 30
+      let newClueChips = generateClueChips(relevant);
       newClueChips = newClueChips.filter(c => !newActiveChips.find(ac => ac.key === c.key));
       setClueChips(newClueChips);
     }

@@ -117,9 +117,21 @@ export async function rankPhotos(queryEmbedding, intentData, allPhotos, activeCh
     if (activeChips.length > 0) {
       activeChips.forEach(chip => {
         let matchesThisChip = false;
+        
+        // Exact metadata matches
         if (chip.type === 'people' && photo.people.includes(chip.value)) matchesThisChip = true;
-        if (chip.type === 'place' && photo.place === chip.value) matchesThisChip = true;
-        if (chip.type === 'event' && photo.event === chip.value) matchesThisChip = true;
+        else if (chip.type === 'place' && photo.place === chip.value) matchesThisChip = true;
+        else if (chip.type === 'event' && photo.event === chip.value) matchesThisChip = true;
+        else if (chip.type === 'concept') matchesThisChip = false; // Evaluated below
+        
+        // Fuzzy description match fallback for all non-custom chips
+        if (!matchesThisChip && chip.type !== 'custom') {
+           const fuzzyVal = chip.value.toLowerCase();
+           const desc = (photoSearchText[photo.id] || "").toLowerCase();
+           if (desc.includes(fuzzyVal)) matchesThisChip = true;
+        }
+
+        // Custom keyword chips
         if (chip.type === 'custom') {
           const customVal = chip.value.toLowerCase();
           const desc = (photoSearchText[photo.id] || "").toLowerCase();
@@ -143,6 +155,9 @@ export async function rankPhotos(queryEmbedding, intentData, allPhotos, activeCh
   return ranked.sort((a, b) => b.score - a.score);
 }
 
+// Broad concepts for fuzzy dynamic chips
+const BROAD_CONCEPTS = ['night', 'day', 'outdoor', 'indoor', 'food', 'selfie', 'group', 'train', 'road', 'nature', 'water', 'building', 'street'];
+
 // Phase 3: The Clue Engine Facet Discovery
 export function generateClueChips(relevantPhotos) {
   if (!relevantPhotos || relevantPhotos.length === 0) return [];
@@ -150,6 +165,7 @@ export function generateClueChips(relevantPhotos) {
   const facetCounts = {}; 
   
   relevantPhotos.forEach(photo => {
+    // Exact Metadata Facets
     if (photo.place) {
       const key = `place:${photo.place}`;
       facetCounts[key] = (facetCounts[key] || 0) + 1;
@@ -164,6 +180,15 @@ export function generateClueChips(relevantPhotos) {
         facetCounts[key] = (facetCounts[key] || 0) + 1;
       });
     }
+    
+    // Broad Concept Facets from rich descriptions
+    const desc = (photoSearchText[photo.id] || "").toLowerCase();
+    BROAD_CONCEPTS.forEach(concept => {
+       if (desc.includes(concept)) {
+          const key = `concept:${concept.charAt(0).toUpperCase() + concept.slice(1)}`;
+          facetCounts[key] = (facetCounts[key] || 0) + 1;
+       }
+    });
   });
   
   // Filter out chips that don't exist, or chips that apply to 100% of the photos (since they don't narrow the search)
