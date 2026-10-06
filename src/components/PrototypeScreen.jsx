@@ -31,13 +31,7 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
   // Track async operations to prevent race conditions
   const searchIdRef = React.useRef(0);
   
-  const [groqKey, setGroqKey] = useState(localStorage.getItem('GROQ_API_KEY') || HARDCODED_GROQ_KEY);
-  const [showSettings, setShowSettings] = useState(false);
-
-  const saveKey = (e) => {
-    setGroqKey(e.target.value);
-    localStorage.setItem('GROQ_API_KEY', e.target.value);
-  };
+  const [groqKey] = useState(localStorage.getItem('GROQ_API_KEY') || HARDCODED_GROQ_KEY);
 
   const resetToDefault = () => {
     setSearchQuery('');
@@ -161,7 +155,6 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
         query={searchQuery} 
         setQuery={setSearchQuery} 
         onSearch={executeSearch}
-        onSettingsClick={() => setShowSettings(!showSettings)}
       />
 
       {(rankedPhotos !== null) && (
@@ -214,17 +207,7 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
         </div>
       )}
       
-      {showSettings && (
-        <div className="api-settings">
-          <input 
-            type="password" 
-            placeholder="Paste Groq API Key here..." 
-            value={groqKey} 
-            onChange={saveKey}
-          />
-          <small>Key is saved to your browser's LocalStorage</small>
-        </div>
-      )}
+
 
       <div className={`gallery-scroll-area ${(clueChips.length > 0 || activeChips.length > 0) ? 'with-chips' : ''}`}>
         {isSearching ? (

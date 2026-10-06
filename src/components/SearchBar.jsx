@@ -1,8 +1,8 @@
 import React from 'react';
-import { Search, Sparkles, Settings } from 'lucide-react';
+import { Search, Sparkles } from 'lucide-react';
 import './SearchBar.css';
 
-export default function SearchBar({ query, setQuery, onSearch, onSettingsClick }) {
+export default function SearchBar({ query, setQuery, onSearch }) {
   
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -26,9 +26,6 @@ export default function SearchBar({ query, setQuery, onSearch, onSettingsClick }
         />
         <button className="icon-btn" onClick={() => onSearch(query)}>
           <Search size={20} color="#5f6368" />
-        </button>
-        <button className="icon-btn" onClick={onSettingsClick} title="API Settings">
-          <Settings size={20} color="#5f6368" />
         </button>
         <div className="avatar">A</div>
       </div>
