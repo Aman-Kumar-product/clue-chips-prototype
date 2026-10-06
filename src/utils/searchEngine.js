@@ -122,10 +122,15 @@ export async function rankPhotos(queryEmbedding, intentData, allPhotos, activeCh
         if (chip.type === 'people' && photo.people.includes(chip.value)) matchesThisChip = true;
         else if (chip.type === 'place' && photo.place === chip.value) matchesThisChip = true;
         else if (chip.type === 'event' && photo.event === chip.value) matchesThisChip = true;
-        else if (chip.type === 'concept') matchesThisChip = false; // Evaluated below
+        else if (chip.type === 'category') {
+          const triggers = BROAD_CATEGORIES[chip.value] || [];
+          if (triggers.includes(photo.place) || triggers.includes(photo.event) || triggers.includes(photo.scene_labels)) {
+            matchesThisChip = true;
+          }
+        }
         
-        // Fuzzy description match fallback for all non-custom chips
-        if (!matchesThisChip && chip.type !== 'custom') {
+        // Fuzzy description match fallback for all non-custom non-category chips
+        if (!matchesThisChip && chip.type !== 'custom' && chip.type !== 'category') {
            const fuzzyVal = chip.value.toLowerCase();
            const desc = (photoSearchText[photo.id] || "").toLowerCase();
            if (desc.includes(fuzzyVal)) matchesThisChip = true;
@@ -155,10 +160,15 @@ export async function rankPhotos(queryEmbedding, intentData, allPhotos, activeCh
   return ranked.sort((a, b) => b.score - a.score);
 }
 
-// Broad concepts for fuzzy dynamic chips
-const BROAD_CONCEPTS = ['night', 'day', 'outdoor', 'indoor', 'food', 'selfie', 'group', 'train', 'road', 'nature', 'water', 'building', 'street'];
+// Category mapping for hierarchical broad chips
+const BROAD_CATEGORIES = {
+  "Indoors": ['Hostel', 'Auditorium', 'Canteen', 'Classroom', 'Library', 'Lab', 'Cafe', 'Office', 'Placement Cell', 'Home', 'room', 'Train', 'Bus', 'Manali Homestay'],
+  "Outdoors": ['Railway Station', 'Campus Gate', 'Main Block', 'Campus Road', 'Lawn', 'Street', 'Hostel Terrace', 'Ground', 'Rooftop', 'Bus Stand', 'Highway', 'Manali', 'City', 'Lake', 'River', 'Hostel Courtyard', 'building', 'landscape'],
+  "Events & People": ['crowd', 'Friends', 'Cultural Fest', 'Orientation', 'Diwali', 'Holi', 'Farewell', 'Graduation', 'Trip', 'Hackathon', 'Departure', 'Arrival', 'Kite Festival'],
+  "Documents & Screen": ['screenshot', 'document'],
+  "Food & Dining": ['food', 'Canteen', 'Cafe', 'Midnight Snack']
+};
 
-// Phase 3: The Clue Engine Facet Discovery
 export function generateClueChips(relevantPhotos) {
   if (!relevantPhotos || relevantPhotos.length === 0) return [];
   
@@ -181,13 +191,13 @@ export function generateClueChips(relevantPhotos) {
       });
     }
     
-    // Broad Concept Facets from rich descriptions
-    const desc = (photoSearchText[photo.id] || "").toLowerCase();
-    BROAD_CONCEPTS.forEach(concept => {
-       if (desc.includes(concept)) {
-          const key = `concept:${concept.charAt(0).toUpperCase() + concept.slice(1)}`;
-          facetCounts[key] = (facetCounts[key] || 0) + 1;
-       }
+    // Map to broad categories
+    Object.keys(BROAD_CATEGORIES).forEach(category => {
+      const triggers = BROAD_CATEGORIES[category];
+      if (triggers.includes(photo.place) || triggers.includes(photo.event) || triggers.includes(photo.scene_labels)) {
+        const key = `category:${category}`;
+        facetCounts[key] = (facetCounts[key] || 0) + 1;
+      }
     });
   });
   
