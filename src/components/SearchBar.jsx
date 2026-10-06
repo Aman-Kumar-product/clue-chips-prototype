@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Menu, Settings } from 'lucide-react';
+import { Search, Sparkles, Settings } from 'lucide-react';
 import './SearchBar.css';
 
 export default function SearchBar({ query, setQuery, onSearch, onSettingsClick }) {
@@ -14,7 +14,7 @@ export default function SearchBar({ query, setQuery, onSearch, onSettingsClick }
     <div className="search-bar-container">
       <div className="search-bar-pill">
         <button className="icon-btn">
-          <Menu size={24} color="#5f6368" />
+          <Sparkles size={24} color="#1a73e8" />
         </button>
         <input 
           type="text" 
