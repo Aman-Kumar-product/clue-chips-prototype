@@ -1,0 +1,74 @@
+[
+  {
+    "task_id": "T1",
+    "target_photo_id": "P038",
+    "difficulty": "Easy",
+    "hint": "The bright and sleepless November fest, everyone forgetting about answers."
+  },
+  {
+    "task_id": "T2",
+    "target_photo_id": "P052",
+    "difficulty": "Easy",
+    "hint": "Sitting quietly during the Manali trip, nobody needing to speak."
+  },
+  {
+    "task_id": "T3",
+    "target_photo_id": "P091",
+    "difficulty": "Easy",
+    "hint": "Running to Meera after getting the placement message, the city glowing."
+  },
+  {
+    "task_id": "T4",
+    "target_photo_id": "P056",
+    "difficulty": "Vague",
+    "hint": "The wobbly bridge during the trip, borrowing bravery from Meera."
+  },
+  {
+    "task_id": "T5",
+    "target_photo_id": "P067",
+    "difficulty": "Vague",
+    "hint": "Tangled wires and failed tests while building the project."
+  },
+  {
+    "task_id": "T6",
+    "target_photo_id": "P043",
+    "difficulty": "Vague",
+    "hint": "A quiet Sunday, forgetting the big question for a few hours."
+  },
+  {
+    "task_id": "T7",
+    "target_photo_id": "P047",
+    "difficulty": "Misleading",
+    "hint": "Winter with borrowed scarves and steaming mugs."
+  },
+  {
+    "task_id": "T8",
+    "target_photo_id": "P073",
+    "difficulty": "Misleading",
+    "hint": "The weekend everything was rebuilt on cans and stubbornness."
+  },
+  {
+    "task_id": "T9",
+    "target_photo_id": "P022",
+    "difficulty": "Misleading",
+    "hint": "Diwali arriving, every window glowing."
+  },
+  {
+    "task_id": "T10",
+    "target_photo_id": "P015",
+    "difficulty": "Easy",
+    "hint": "Kabir in a black cap saving a seat."
+  },
+  {
+    "task_id": "T11",
+    "target_photo_id": "P107",
+    "difficulty": "Vague",
+    "hint": "Throwing caps in black gowns at the end."
+  },
+  {
+    "task_id": "T12",
+    "target_photo_id": "P082",
+    "difficulty": "Misleading",
+    "hint": "The summer internship with a lanyard and a desk of my own."
+  }
+]

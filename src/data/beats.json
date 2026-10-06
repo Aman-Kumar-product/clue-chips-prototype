@@ -1,0 +1,448 @@
+[
+  {
+    "beat": "1.0",
+    "chapter": "Arrival",
+    "story_role": "Hook",
+    "narration_line": "Four years ago I told my mother I wasn't scared. It was the first lie I told at college.",
+    "photo_ids": [
+      "P001",
+      "P002",
+      "P003"
+    ]
+  },
+  {
+    "beat": "2.0",
+    "chapter": "Arrival",
+    "story_role": "Setup",
+    "narration_line": "The gate looked bigger than the brochure, my hostel room smaller. I kept the yellow backpack on, just in case.",
+    "photo_ids": [
+      "P004",
+      "P005",
+      "P006"
+    ]
+  },
+  {
+    "beat": "3.0",
+    "chapter": "Arrival",
+    "story_role": "Setup",
+    "narration_line": "Meera, my roommate, already knew half the batch. I knew nobody, and smiled like I didn't mind.",
+    "photo_ids": [
+      "P007",
+      "P008",
+      "P009"
+    ]
+  },
+  {
+    "beat": "4.0",
+    "chapter": "Arrival",
+    "story_role": "Setup",
+    "narration_line": "Textbooks, a plastic ID card, and lunch in the canteen, where everyone seemed to belong except me.",
+    "photo_ids": [
+      "P010",
+      "P011",
+      "P014"
+    ]
+  },
+  {
+    "beat": "5.0",
+    "chapter": "Arrival",
+    "story_role": "Rising",
+    "narration_line": "Then the rain came, and Meera dragged me out of the hostel under her umbrella. Somehow, I laughed.",
+    "photo_ids": [
+      "P012",
+      "P013"
+    ]
+  },
+  {
+    "beat": "6.0",
+    "chapter": "Arrival",
+    "story_role": "Rising",
+    "narration_line": "A boy in a black cap saved me a seat. That was Kabir. By mid-August, I had two friends.",
+    "photo_ids": [
+      "P015",
+      "P016"
+    ]
+  },
+  {
+    "beat": "7.0",
+    "chapter": "Finding my feet",
+    "story_role": "Bridge",
+    "narration_line": "September taught me two things: Kabir's handwriting is a gift, and the library closes at ten sharp.",
+    "photo_ids": [
+      "P017",
+      "P018"
+    ]
+  },
+  {
+    "beat": "8.0",
+    "chapter": "Finding my feet",
+    "story_role": "Rising",
+    "narration_line": "Samosas became our ritual. Evenings meant the terrace, an orange sky, and home feeling far but bearable.",
+    "photo_ids": [
+      "P019",
+      "P020",
+      "P021"
+    ]
+  },
+  {
+    "beat": "9.0",
+    "chapter": "Finding my feet",
+    "story_role": "Motif",
+    "narration_line": "Every Sunday Maa called, and every Sunday I said I was fine. Then Diwali arrived and every window glowed.",
+    "photo_ids": [
+      "P022",
+      "P023"
+    ]
+  },
+  {
+    "beat": "10.0",
+    "chapter": "Finding my feet",
+    "story_role": "Rising",
+    "narration_line": "Winter crept in. Papers, panic and pinned-up lists; we all pretended not to look.",
+    "photo_ids": [
+      "P024",
+      "P025",
+      "P026"
+    ]
+  },
+  {
+    "beat": "11.0",
+    "chapter": "Finding my feet",
+    "story_role": "Rising",
+    "narration_line": "January's sky was full of kites, and mine kept tangling. Meera laughed so hard she let go of hers.",
+    "photo_ids": [
+      "P027",
+      "P028",
+      "P029"
+    ]
+  },
+  {
+    "beat": "12.0",
+    "chapter": "Finding my feet",
+    "story_role": "Inciting question",
+    "narration_line": "Then a senior named Tanvi asked me one question I couldn't answer: why are you here?",
+    "photo_ids": [
+      "P030",
+      "P031"
+    ]
+  },
+  {
+    "beat": "13.0",
+    "chapter": "Second year",
+    "story_role": "Bridge",
+    "narration_line": "Second year began, and suddenly I was the senior pointing others the right way, still without an answer.",
+    "photo_ids": [
+      "P032",
+      "P033"
+    ]
+  },
+  {
+    "beat": "14.0",
+    "chapter": "Second year",
+    "story_role": "Search",
+    "narration_line": "I looked for answers in the lab, among wires, blinking lights, and Dev, who talked to circuits like old friends.",
+    "photo_ids": [
+      "P034",
+      "P035"
+    ]
+  },
+  {
+    "beat": "15.0",
+    "chapter": "Second year",
+    "story_role": "High point",
+    "narration_line": "November arrived loud, bright and sleepless. The whole college forgot about answers, and so did I.",
+    "photo_ids": [
+      "P036",
+      "P037",
+      "P038",
+      "P039"
+    ]
+  },
+  {
+    "beat": "16.0",
+    "chapter": "Second year",
+    "story_role": "High point",
+    "narration_line": "Ice cream, dancing, and a shelf of tiny trophies none of us won. Best fest of my life.",
+    "photo_ids": [
+      "P040",
+      "P041",
+      "P042"
+    ]
+  },
+  {
+    "beat": "17.0",
+    "chapter": "Second year",
+    "story_role": "Quiet turn",
+    "narration_line": "Sunday arrived quietly. For a few hours, I forgot my question.",
+    "photo_ids": [
+      "P043",
+      "P044"
+    ]
+  },
+  {
+    "beat": "18.0",
+    "chapter": "Second year",
+    "story_role": "Rising",
+    "narration_line": "Winter again: borrowed scarves, steaming mugs, and nights that refused to end.",
+    "photo_ids": [
+      "P045",
+      "P046",
+      "P047"
+    ]
+  },
+  {
+    "beat": "19.0",
+    "chapter": "The break away",
+    "story_role": "Bridge",
+    "narration_line": "Summer break: four of us, one overnight bus, and Manali somewhere at the end of a very bendy road.",
+    "photo_ids": [
+      "P048",
+      "P049",
+      "P050"
+    ]
+  },
+  {
+    "beat": "20.0",
+    "chapter": "The break away",
+    "story_role": "Calm",
+    "narration_line": "Nobody spoke for a while. For once, nobody needed to.",
+    "photo_ids": [
+      "P051",
+      "P052",
+      "P053"
+    ]
+  },
+  {
+    "beat": "21.0",
+    "chapter": "The break away",
+    "story_role": "Motif",
+    "narration_line": "Cold fingers, a wobbly bridge, and bravery borrowed from Meera. I did not tell Maa about the bridge.",
+    "photo_ids": [
+      "P054",
+      "P055",
+      "P056"
+    ]
+  },
+  {
+    "beat": "22.0",
+    "chapter": "The break away",
+    "story_role": "Rising",
+    "narration_line": "The market sold woollen caps. Kabir bought two, then met snow and lost the argument immediately.",
+    "photo_ids": [
+      "P057",
+      "P058"
+    ]
+  },
+  {
+    "beat": "23.0",
+    "chapter": "The break away",
+    "story_role": "Rising",
+    "narration_line": "Smoke in our clothes, a guitar nobody could play, and four exhausted heads on the long ride back.",
+    "photo_ids": [
+      "P059",
+      "P060",
+      "P061",
+      "P062"
+    ]
+  },
+  {
+    "beat": "24.0",
+    "chapter": "Building things",
+    "story_role": "Bridge",
+    "narration_line": "Third year handed us one big idea and no idea how to build it. Dev said: we'll figure it out.",
+    "photo_ids": [
+      "P063",
+      "P064",
+      "P065"
+    ]
+  },
+  {
+    "beat": "25.0",
+    "chapter": "Building things",
+    "story_role": "False confidence",
+    "narration_line": "Months of tangled wires and failed tests. We were so sure we were close.",
+    "photo_ids": [
+      "P066",
+      "P067",
+      "P068"
+    ]
+  },
+  {
+    "beat": "26.0",
+    "chapter": "Building things",
+    "story_role": "Low point",
+    "narration_line": "The review panel said our idea would never work. Afterwards Tanvi asked again: why are you here?",
+    "photo_ids": [
+      "P071",
+      "P070",
+      "P069"
+    ]
+  },
+  {
+    "beat": "27.0",
+    "chapter": "Building things",
+    "story_role": "Turning point",
+    "narration_line": "I didn't sleep. I went to the lake at sunrise and decided to try again, scared, but trying.",
+    "photo_ids": [
+      "P072"
+    ]
+  },
+  {
+    "beat": "28.0",
+    "chapter": "Building things",
+    "story_role": "Comeback",
+    "narration_line": "One winter weekend, we rebuilt everything on cans and stubbornness. And then, impossibly, the judges clapped.",
+    "photo_ids": [
+      "P073",
+      "P074",
+      "P075"
+    ]
+  },
+  {
+    "beat": "29.0",
+    "chapter": "Building things",
+    "story_role": "Release",
+    "narration_line": "Afterwards came quiet afternoons at the cafe, flat whites, and a road covered in red petals. I almost felt brave.",
+    "photo_ids": [
+      "P076",
+      "P077",
+      "P078"
+    ]
+  },
+  {
+    "beat": "30.0",
+    "chapter": "Getting ready",
+    "story_role": "Bridge",
+    "narration_line": "That summer, an internship: a lanyard, a desk of my own, and the odd feeling of being taken seriously.",
+    "photo_ids": [
+      "P079",
+      "P080",
+      "P081",
+      "P082"
+    ]
+  },
+  {
+    "beat": "31.0",
+    "chapter": "Getting ready",
+    "story_role": "Rising stakes",
+    "narration_line": "Final year began with sunset walks, one printed resume, and a lot of quiet worry about what came next.",
+    "photo_ids": [
+      "P083",
+      "P084",
+      "P085"
+    ]
+  },
+  {
+    "beat": "32.0",
+    "chapter": "Getting ready",
+    "story_role": "Tension",
+    "narration_line": "Then placement season: a borrowed blazer, polished shoes, and a corridor full of people pretending not to be nervous.",
+    "photo_ids": [
+      "P086",
+      "P087",
+      "P088"
+    ]
+  },
+  {
+    "beat": "33.0",
+    "chapter": "Getting ready",
+    "story_role": "Climax build",
+    "narration_line": "Five days of waiting. I checked my phone forty times before lunch. Then, one message.",
+    "photo_ids": [
+      "P089",
+      "P092"
+    ]
+  },
+  {
+    "beat": "34.0",
+    "chapter": "Getting ready",
+    "story_role": "Climax",
+    "narration_line": "I read it four times. Then I ran, and Meera was already running too. The whole city glowed.",
+    "photo_ids": [
+      "P091",
+      "P090",
+      "P093"
+    ]
+  },
+  {
+    "beat": "35.0",
+    "chapter": "Getting ready",
+    "story_role": "Truth",
+    "narration_line": "Home for winter. Over tea, Maa asked how I really was. For the first time, I didn't say fine.",
+    "photo_ids": [
+      "P094"
+    ]
+  },
+  {
+    "beat": "36.0",
+    "chapter": "Goodbye",
+    "story_role": "Bridge",
+    "narration_line": "Final semester. January mist, one last demo day, and a camera I kept raising before the moments could slip away.",
+    "photo_ids": [
+      "P095",
+      "P096",
+      "P097"
+    ]
+  },
+  {
+    "beat": "37.0",
+    "chapter": "Goodbye",
+    "story_role": "Joy",
+    "narration_line": "Holi turned the courtyard into a paint box, and nobody stayed clean.",
+    "photo_ids": [
+      "P098",
+      "P099"
+    ]
+  },
+  {
+    "beat": "38.0",
+    "chapter": "Goodbye",
+    "story_role": "Falling",
+    "narration_line": "Then the goodbyes began quietly: returned library books, an empty classroom, a bare mattress. Everything echoed.",
+    "photo_ids": [
+      "P100",
+      "P101",
+      "P102"
+    ]
+  },
+  {
+    "beat": "39.0",
+    "chapter": "Goodbye",
+    "story_role": "Falling",
+    "narration_line": "Handwritten cards, one last sunset on the auditorium steps, and string lights over everyone I'd miss.",
+    "photo_ids": [
+      "P103",
+      "P104",
+      "P105"
+    ]
+  },
+  {
+    "beat": "40.0",
+    "chapter": "Goodbye",
+    "story_role": "Payoff",
+    "narration_line": "Five cups, clinked. Black gowns, thrown caps. Tanvi once asked why I came. Now I knew: to find these four.",
+    "photo_ids": [
+      "P106",
+      "P107",
+      "P108"
+    ]
+  },
+  {
+    "beat": "41.0",
+    "chapter": "Goodbye",
+    "story_role": "Callback",
+    "narration_line": "I walked out through the same gate, scared again, the yellow backpack still on my shoulder.",
+    "photo_ids": [
+      "P109"
+    ]
+  },
+  {
+    "beat": "42.0",
+    "chapter": "Goodbye",
+    "story_role": "Twist",
+    "narration_line": "I called Maa from the window seat and told the truth. She laughed. She'd known since the first Sunday.",
+    "photo_ids": [
+      "P110"
+    ]
+  }
+]
