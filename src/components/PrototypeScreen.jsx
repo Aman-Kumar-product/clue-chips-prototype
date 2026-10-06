@@ -125,6 +125,8 @@ export default function PrototypeScreen({ currentTask, onTaskComplete }) {
       
       setRankedPhotos(results);
       
+      const { relevant } = splitPhotos(results, newActiveChips);
+      
       // Generate chips from ALL relevant photos, not just the top 30
       let newClueChips = generateClueChips(relevant);
       newClueChips = newClueChips.filter(c => !newActiveChips.find(ac => ac.key === c.key));
